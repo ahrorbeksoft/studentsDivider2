@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pairStudents</title>
+    <script>
+      (function () {
+        // Get theme from localStorage
+        const theme = localStorage.getItem("vite-ui-theme") || "system";
+        document.documentElement.classList.remove("light", "dark");
+
+        if (theme === "system") {
+          const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+            .matches
+            ? "dark"
+            : "light";
+
+          document.documentElement.classList.add(systemTheme);
+          return;
+        }
+
+        // Apply the theme to the document
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.add("light");
+        }
+      })();
+    </script>
+
+    <style>
+
+    .light {
+        background-color: #ffffff;
+    }
+
+    .dark {
+        background-color: #0a0a0a;
+    }
+
+
+    </style>
+  </head>
+
+
+
+  <body class="size-full overflow-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
