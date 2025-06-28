@@ -29,8 +29,8 @@ To get the application up and running on your local machine, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/pairStudents.git
-    cd pairStudents
+    git clone https://github.com/ahrorbeksoft/studentsDivider2.git
+    cd studentsDivider2
     ```
 2.  **Install dependencies:**
     ```bash
